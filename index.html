@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>T. H. Suganthan - Chartered Accountant</title>
+    <title>T.H. Suganthan - Resume </title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -12,768 +13,701 @@
         }
 
         body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #0f0f23 0%, #1a1a3e 100%);
-            color: #ffffff;
-            line-height: 1.6;
+            font-family: 'Poppins', sans-serif;
+            background: #0c0c0c;
+            color: #e0e0e0;
+            min-height: 100vh;
             overflow-x: hidden;
+            position: relative;
         }
 
+        /* Animated Background */
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .background span {
+            position: absolute;
+            display: block;
+            width: 20px;
+            height: 20px;
+            background: rgba(100, 255, 218, 0.2);
+            animation: move 25s linear infinite;
+            bottom: -150px;
+        }
+
+        .background span:nth-child(1) {
+            left: 25%;
+            width: 80px;
+            height: 80px;
+            animation-delay: 0s;
+        }
+
+        .background span:nth-child(2) {
+            left: 10%;
+            width: 20px;
+            height: 20px;
+            animation-delay: 2s;
+            animation-duration: 12s;
+        }
+
+        .background span:nth-child(3) {
+            left: 70%;
+            width: 20px;
+            height: 20px;
+            animation-delay: 4s;
+        }
+
+        .background span:nth-child(4) {
+            left: 40%;
+            width: 60px;
+            height: 60px;
+            animation-delay: 0s;
+            animation-duration: 18s;
+        }
+
+        .background span:nth-child(5) {
+            left: 65%;
+            width: 20px;
+            height: 20px;
+            animation-delay: 0s;
+        }
+
+        .background span:nth-child(6) {
+            left: 75%;
+            width: 110px;
+            height: 110px;
+            animation-delay: 3s;
+        }
+
+        .background span:nth-child(7) {
+            left: 35%;
+            width: 150px;
+            height: 150px;
+            animation-delay: 7s;
+        }
+
+        .background span:nth-child(8) {
+            left: 50%;
+            width: 25px;
+            height: 25px;
+            animation-delay: 15s;
+            animation-duration: 45s;
+        }
+
+        .background span:nth-child(9) {
+            left: 20%;
+            width: 15px;
+            height: 15px;
+            animation-delay: 2s;
+            animation-duration: 35s;
+        }
+
+        .background span:nth-child(10) {
+            left: 85%;
+            width: 150px;
+            height: 150px;
+            animation-delay: 0s;
+            animation-duration: 11s;
+        }
+
+        @keyframes move {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+                border-radius: 0;
+            }
+            100% {
+                transform: translateY(-1000px) rotate(720deg);
+                opacity: 0;
+                border-radius: 50%;
+            }
+        }
+
+        /* Main Container */
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 40px 20px;
+            position: relative;
+            z-index: 1;
         }
 
         /* Header */
-        header {
-            background: rgba(0, 0, 0, 0.3);
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+            padding: 40px 0;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
             backdrop-filter: blur(10px);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            transition: all 0.3s ease;
+            border: 1px solid rgba(100, 255, 218, 0.1);
         }
 
-        nav {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            padding: 1rem 0;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            color: #ffffff;
-            text-decoration: none;
-            transition: color 0.3s ease;
-            position: relative;
-        }
-
-        .nav-links a:hover {
-            color: #64ffda;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: #64ffda;
-            transition: width 0.3s ease;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            position: relative;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 120px 0 60px;
-        }
-
-        .hero-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .hero-text h1 {
+        .header h1 {
             font-size: 3.5rem;
-            margin-bottom: 1rem;
-            background: linear-gradient(45deg, #64ffda, #bb86fc);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero-text h2 {
-            font-size: 1.5rem;
-            color: #e0e0e0;
-            margin-bottom: 1rem;
-        }
-
-        .hero-text p {
-            font-size: 1.1rem;
-            color: #b0b0b0;
-            margin-bottom: 2rem;
+            font-weight: 700;
+            color: #64ffda;
+            margin-bottom: 10px;
+            text-shadow: 0 0 20px rgba(100, 255, 218, 0.3);
         }
 
         .contact-info {
             display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-            margin-bottom: 2rem;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+            flex-wrap: wrap;
         }
 
-        .contact-info span {
+        .contact-item {
+            color: #b8b8b8;
+            font-size: 1rem;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 8px;
+        }
+
+        .contact-item::before {
+            content: "●";
             color: #64ffda;
         }
 
-        .cta-button {
-            background: linear-gradient(45deg, #64ffda, #bb86fc);
-            color: #000;
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 50px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: transform 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-2px);
-        }
-
-        .hero-visual {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .profile-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(20px);
-            border-radius: 20px;
-            padding: 1.5rem;
-            text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            max-width: 280px;
-        }
-
-        .profile-card h3 {
-            color: #64ffda;
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
-        }
-
-        .profile-card p {
-            color: #e0e0e0;
-            font-size: 0.9rem;
-            line-height: 1.4;
-        }
-
-        .profile-avatar {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            background: linear-gradient(45deg, #64ffda, #bb86fc);
-            margin: 0 auto 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #000;
-        }
-
-        /* Sections */
-        section {
-            padding: 5rem 0;
+        /* Section Styling */
+        .section {
+            margin-bottom: 50px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 15px;
+            padding: 30px;
+            border-left: 4px solid #64ffda;
+            backdrop-filter: blur(5px);
         }
 
         .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            background: linear-gradient(45deg, #64ffda, #bb86fc);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            font-size: 2.2rem;
+            font-weight: 600;
+            color: #64ffda;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
-        /* Experience Section */
-        .experience-timeline {
+        .section-content {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #e0e0e0;
+        }
+
+        /* Work Experience Cards */
+        .work-experience {
+            display: grid;
+            gap: 25px;
+        }
+
+        .job-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 25px;
+            border: 1px solid rgba(100, 255, 218, 0.1);
+            transition: all 0.4s ease;
+            cursor: pointer;
             position: relative;
-            padding: 2rem 0;
+            overflow: hidden;
         }
 
-        .experience-item {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(20px);
-            border-radius: 15px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            border-left: 4px solid #64ffda;
-            transition: transform 0.3s ease;
-            position: relative;
-        }
-
-        .experience-item:hover {
-            transform: translateX(10px);
-        }
-
-        .experience-item .full-text {
+        .job-card::before {
+            content: '';
             position: absolute;
             top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.95);
-            backdrop-filter: blur(20px);
-            border-radius: 15px;
-            padding: 2rem;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-            z-index: 10;
-            overflow-y: auto;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(100, 255, 218, 0.1), transparent);
+            transition: left 0.5s;
         }
 
-        .experience-item:hover .full-text {
-            opacity: 1;
-            visibility: visible;
+        .job-card:hover::before {
+            left: 100%;
         }
 
-        .experience-item .full-text h3 {
-            color: #64ffda;
-            margin-bottom: 1rem;
+        .job-card:hover {
+            transform: translateY(-5px);
+            border-color: #64ffda;
+            box-shadow: 0 15px 30px rgba(100, 255, 218, 0.2);
         }
 
-        .experience-item .full-text p {
-            color: #e0e0e0;
-            line-height: 1.6;
-        }
-
-        .experience-header {
+        .job-header {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            margin-bottom: 1rem;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
-        .experience-title {
-            font-size: 1.3rem;
+        .job-title {
+            font-size: 1.4rem;
+            font-weight: 600;
             color: #64ffda;
-            margin-bottom: 0.5rem;
         }
 
-        .experience-company {
+        .job-company {
             font-size: 1.1rem;
-            color: #bb86fc;
-            margin-bottom: 0.5rem;
+            color: #b8b8b8;
+            margin-top: 5px;
         }
 
-        .experience-date {
-            background: linear-gradient(45deg, #64ffda, #bb86fc);
-            color: #000;
-            padding: 0.5rem 1rem;
+        .job-duration {
+            font-size: 1rem;
+            color: #888;
+            background: rgba(100, 255, 218, 0.1);
+            padding: 5px 15px;
             border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: bold;
         }
 
-        .experience-description {
+        .job-details {
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.5s ease;
+            opacity: 0;
+        }
+
+        .job-card:hover .job-details {
+            max-height: 600px;
+            opacity: 1;
+            margin-top: 20px;
+        }
+
+        .job-details-content {
+            max-height: 400px;
+            overflow-y: auto;
+            padding-right: 10px;
+        }
+
+        .job-details-content::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .job-details-content::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 3px;
+        }
+
+        .job-details-content::-webkit-scrollbar-thumb {
+            background: #64ffda;
+            border-radius: 3px;
+        }
+
+        .job-details ul {
             list-style: none;
             padding: 0;
         }
 
-        .experience-description li {
-            margin-bottom: 0.5rem;
-            padding-left: 1.5rem;
+        .job-details li {
+            margin-bottom: 12px;
+            padding-left: 20px;
             position: relative;
+            line-height: 1.6;
+            color: #d0d0d0;
         }
 
-        .experience-description li::before {
-            content: '▶';
+        .job-details li::before {
+            content: "▶";
             position: absolute;
             left: 0;
             color: #64ffda;
+            font-size: 0.8rem;
+        }
+
+        .technologies {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(100, 255, 218, 0.2);
+        }
+
+        .tech-label {
+            font-weight: 600;
+            color: #64ffda;
+            margin-bottom: 8px;
+        }
+
+        /* Projects Section */
+        .project-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-left: 4px solid #64ffda;
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateX(10px);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .project-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #64ffda;
+            margin-bottom: 10px;
+        }
+
+        .project-duration {
+            color: #888;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
         }
 
         /* Skills Section */
         .skills-grid {
             display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-            margin-top: 2rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
         }
 
-        .skill-category {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(20px);
-            border-radius: 15px;
-            padding: 2rem;
+        .skill-item {
+            background: rgba(100, 255, 218, 0.1);
+            padding: 15px 20px;
+            border-radius: 25px;
             text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
         }
 
-        .skill-category h3 {
-            color: #64ffda;
-            margin-bottom: 1.5rem;
-            font-size: 1.5rem;
+        .skill-item:hover {
+            background: rgba(100, 255, 218, 0.2);
+            border-color: #64ffda;
+            transform: scale(1.05);
         }
 
-        .skill-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.8rem;
-            justify-content: center;
-        }
-
-        .skill-tag {
-            background: linear-gradient(45deg, #64ffda, #bb86fc);
-            color: #000;
-            padding: 0.7rem 1.2rem;
-            border-radius: 20px;
-            font-size: 1rem;
-            font-weight: bold;
-        }
-
-        /* Projects Section */
-        .project-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(20px);
-            border-radius: 15px;
-            padding: 2rem;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: transform 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .project-title {
-            color: #64ffda;
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-        }
-
-        .project-tech {
-            display: flex;
-            gap: 0.5rem;
-            margin-top: 1rem;
-        }
-
-        .tech-tag {
-            background: #bb86fc;
-            color: #000;
-            padding: 0.3rem 0.8rem;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            font-weight: bold;
-        }
-
-        /* Education & Certifications */
-        .education-cert-grid {
+        /* Education & Certification */
+        .edu-cert-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            margin-top: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
         }
 
-        .education-card, .cert-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(20px);
-            border-radius: 15px;
-            padding: 2rem;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+        .cert-item, .edu-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid rgba(100, 255, 218, 0.1);
+            transition: all 0.3s ease;
         }
 
-        .education-card h3, .cert-card h3 {
+        .cert-item:hover, .edu-item:hover {
+            border-color: #64ffda;
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .cert-title, .edu-title {
+            font-size: 1.2rem;
+            font-weight: 600;
             color: #64ffda;
-            margin-bottom: 1rem;
+            margin-bottom: 10px;
         }
 
-        /* Footer */
-        footer {
-            background: rgba(0, 0, 0, 0.5);
-            text-align: center;
-            padding: 2rem 0;
-            margin-top: 3rem;
+        /* Languages */
+        .languages {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .language-item {
+            background: linear-gradient(45deg, #64ffda, #4db6ac);
+            color: #0f0f23;
+            padding: 12px 24px;
+            border-radius: 20px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .language-item:hover {
+            transform: scale(1.1);
+            box-shadow: 0 5px 15px rgba(100, 255, 218, 0.3);
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .hero-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-
-            .hero-text h1 {
+            .header h1 {
                 font-size: 2.5rem;
             }
-
-            .nav-links {
-                display: none;
-            }
-
-            .education-cert-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .experience-header {
+            
+            .contact-info {
                 flex-direction: column;
-                align-items: flex-start;
+                gap: 15px;
             }
-
-            .skills-grid {
-                grid-template-columns: 1fr;
+            
+            .job-header {
+                flex-direction: column;
             }
-        }
-
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
+            
+            .container {
+                padding: 20px 15px;
             }
         }
 
-        .animate-fade-in {
-            animation: fadeInUp 0.8s ease-out;
+        /* Hover Hint */
+        .hover-hint {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            color: #64ffda;
+            font-size: 0.8rem;
+            opacity: 0.7;
+            pointer-events: none;
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <nav class="container">
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Animated Background -->
+    <div class="background">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text animate-fade-in">
-                    <h1>T. H. Suganthan</h1>
-                    <h2>Chartered Accountant cum ERP Consultant</h2>
-                    <p>Experienced Chartered Accountant with strong expertise in end-to-end accounting, financial reporting, and financial controls. Passionate about leveraging automation, AI-driven insights, and custom-built tools to streamline financial operations.</p>
-                    
-                    <div class="contact-info">
-                        <span>📧 thsuganthan@gmail.com</span>
-                        <span>📱 +91-7418615997</span>
-                        <span>📍 Chennai, Tamil Nadu - 600129</span>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>T. H. Suganthan</h1>
+            <div class="contact-info">
+                <div class="contact-item">thsuganthan@gmail.com</div>
+                <div class="contact-item">+91-7418615997</div>
+                <div class="contact-item">Plot No.4, Radhakrishnan Nagar, Nanmangalam</div>
+            </div>
+        </header>
+
+        <!-- Professional Summary -->
+        <section class="section">
+            <h2 class="section-title">Professional Summary</h2>
+            <div class="section-content">
+                Experienced Chartered Accountant with strong finance, compliance, and reporting expertise, seeking techno-functional roles in NetSuite ERP. Possesses solid functional knowledge and advanced basic understanding of SuiteScript and SuiteBuilder; currently undergoing SuiteScript training to deepen technical expertise. Skilled in bridging finance and ERP to support effective system implementation and process optimization.
+            </div>
+        </section>
+
+        <!-- Work Experience -->
+        <section class="section">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="work-experience">
+                <!-- Senior Accountant -->
+                <div class="job-card">
+                    <div class="hover-hint">Hover to see details</div>
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Senior Accountant</div>
+                            <div class="job-company">Tekion India Pvt Ltd - Chennai</div>
+                        </div>
+                        <div class="job-duration">Jul 2022 - Present</div>
                     </div>
-                    
-                    <a href="#contact" class="cta-button">Get In Touch</a>
+                    <div class="job-details">
+                        <div class="job-details-content">
+                            <ul>
+                                <li>Played a key functional role in the successful implementation and optimization of NetSuite ERP, migrating from legacy ERP (ZERO). Actively involved in modules such as Accounts Payable (AP), Fixed Assets (FA), Financials, Record-to-Report, Procure-to-Pay (P2P), Employee Claims, and India Localization.</li>
+                                <li>Collaborated with internal stakeholders and external consultants to design, test, and deploy NetSuite configurations and customizations, including SuiteScript-based enhancements. Possess foundational knowledge of SuiteScript, with hands-on experience in testing scripts, analyzing business logic, and ensuring seamless process integration.</li>
+                                <li>Certified NetSuite SuiteFoundation professional, with strong understanding of standard navigation, records, user roles, and NetSuite architecture.</li>
+                                <li>Conducted UAT (User Acceptance Testing) and led internal training sessions for NetSuite users. Provided ongoing functional support, issue resolution, and user enablement across business functions.</li>
+                                <li>Successfully migrated the organization from single-book to multi-book accounting in NetSuite. Currently working on enabling the EMEA subsidiary, setting USD as the primary book currency and local currency as the secondary book, ensuring compliance with local reporting requirements.</li>
+                                <li>Designed and delivered custom reports and dashboards within NetSuite for management reporting, compliance tracking, and statutory audit support.</li>
+                                <li>Led accounting and month-end closure activities for Indian and Canadian entities, including review of financial schedules, reconciliations, and review decks. Oversaw complete Fixed Assets Management, including asset creation, capitalization, depreciation, disposal, and asset register maintenance.</li>
+                                <li>Managed statutory audits, tax audits, and internal audits, with comprehensive responsibility for preparing P&L, Balance Sheet, and Cash Flow Statements as per Indian GAAP. Well-versed in SEZ and STPI compliance reporting, including monthly, quarterly, and annual filings.</li>
+                                <li>Handled full-spectrum statutory compliances: Direct Taxes (TDS, TCS, and Form 15CA/15CB), Indirect Taxes (GST returns, SEZ/STPI filings), Regulatory Filings (AOC-4, MGT-7, MSME disclosures, FLA return, RBI submissions), Payroll Statutory Compliance (PF, ESI, Professional Tax, and LWF).</li>
+                                <li>Directed end-to-end Accounts Payable operations, including vendor onboarding, vendor negotiation, employee reimbursements, and automated vendor payments via Host-to-Host (H2H) integration.</li>
+                                <li>Played a key role in the implementation of ZIP, a procurement automation tool integrated with NetSuite, enhancing process efficiency across the P2P cycle.</li>
+                                <li>Drafted and institutionalized accounting policies and SOPs for Fixed Assets capitalization, Employee Reimbursement, and Reverse Charge Mechanism (RCM) processes.</li>
+                                <li>Well-versed in budgeting, forecasting, and variance analysis, performing detailed Budget vs. Actuals reviews to support strategic financial planning and stakeholder reporting.</li>
+                                <li>Managed ad-hoc financial reporting requirements and ensured all processes remained compliant with tax laws and accounting standards.</li>
+                            </ul>
+                            <div class="technologies">
+                                <div class="tech-label">Technologies:</div>
+                                NetSuite, SuiteScript JavaScript, Xero, Tally, Floqast, Concur
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="hero-visual animate-fade-in">
-                    <div class="profile-card">
-                        <div class="profile-avatar">THS</div>
-                        <h3>Chartered Accountant</h3>
-                        <p>NetSuite Expert | Financial Reporting | Automation Enthusiast</p>
+
+                <!-- Finance Analyst -->
+                <div class="job-card">
+                    <div class="hover-hint">Hover to see details</div>
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Finance Analyst (On Contract)</div>
+                            <div class="job-company">Shell India Markets Pvt Ltd - Chennai</div>
+                        </div>
+                        <div class="job-duration">Jul 2021 - Mar 2022</div>
+                    </div>
+                    <div class="job-details">
+                        <div class="job-details-content">
+                            <ul>
+                                <li>Managed month-end book closures, journal entries, financial reporting, and reconciliations</li>
+                                <li>Conducted balance sheet reconciliations, prepaid/accrual analysis, and financial reporting</li>
+                                <li>Performed book closure activities, ensuring timely and accurate standard accounting processes</li>
+                                <li>Executed monthly cost and revenue accruals, and supported financial reporting processes</li>
+                                <li>Handled Statutory audit for foreign entities</li>
+                            </ul>
+                            <div class="technologies">
+                                <div class="tech-label">Technologies:</div>
+                                SERP
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Specialist -->
+                <div class="job-card">
+                    <div class="hover-hint">Hover to see details</div>
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Specialist – Financial Management Reporting</div>
+                            <div class="job-company">Olam Information Technology Services Pvt Ltd - Chennai</div>
+                        </div>
+                        <div class="job-duration">Dec 2019 - Dec 2020</div>
+                    </div>
+                    <div class="job-details">
+                        <div class="job-details-content">
+                            <ul>
+                                <li>Performed book closure activities, ensuring timely and accurate standard accounting processes</li>
+                                <li>Executed monthly cost and revenue accruals, and supported financial reporting processes</li>
+                                <li>Handled Statutory audit for foreign entities</li>
+                            </ul>
+                            <div class="technologies">
+                                <div class="tech-label">Technologies:</div>
+                                SAP
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article Assistant -->
+                <div class="job-card">
+                    <div class="hover-hint">Hover to see details</div>
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Article Assistant</div>
+                            <div class="job-company">S. Govindarajan, Chartered Accountant - Kumbakonam</div>
+                        </div>
+                        <div class="job-duration">Jun 2014 - Oct 2019</div>
+                    </div>
+                    <div class="job-details">
+                        <div class="job-details-content">
+                            <ul>
+                                <li>Managed direct tax assessments, statutory audits for companies and banks, GST returns, ITR filings, and client advisory services</li>
+                                <li>Led tax audits and ensured statutory compliance across client portfolios</li>
+                                <li>Managed firm and led a team of 10 people</li>
+                            </ul>
+                            <div class="technologies">
+                                <div class="tech-label">Technologies:</div>
+                                Tally, Winman
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="container">
-        <h2 class="section-title">Technical Skills</h2>
-        
-        <div class="skills-grid">
-            <div class="skill-category animate-fade-in">
-                <h3>ERP & Financial Systems</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">NetSuite</span>
-                    <span class="skill-tag">SuiteScript</span>
-                    <span class="skill-tag">SuiteBuilder</span>
-                    <span class="skill-tag">SAP</span>
-                    <span class="skill-tag">Tally</span>
-                    <span class="skill-tag">Xero</span>
+        <!-- Projects -->
+        <section class="section">
+            <h2 class="section-title">Projects</h2>
+            <div class="project-card">
+                <div class="project-title">NetSuite Migration from Zero</div>
+                <div class="project-duration">Dec 2022 - Mar 2023</div>
+                <p>Implemented NetSuite ERP from scratch, migrating from legacy system (ZERO) and configuring key modules including P2P, Fixed Assets, General Ledger, Intercompany, and Order-to-Cash (O2C). Led end-to-end functional design, testing, user training, and post-go-live support across all modules.</p>
+            </div>
+            <div class="project-card">
+                <div class="project-title">Multi-Books Integration in NetSuite</div>
+                <div class="project-duration">Dec 2024 - Jan 2025</div>
+                <p>Led integration of multi-books for India legal entity by deactivating the old subsidiary and creating new books with multi-book functionality, including change of primary currency from INR to USD. Transferred GL balances, created open vendor invoices, intercompany transactions, open POs, customer balances, and fixed asset masters. Validated all financial balances and master data post-implementation, ensuring data integrity. Recognized for successful execution with a Spot Bonus awarded by management.</p>
+                <div class="technologies">
+                    <div class="tech-label">Technologies:</div>
+                    SuiteScript
                 </div>
             </div>
+        </section>
 
-            <div class="skill-category animate-fade-in">
-                <h3>Programming & Automation</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">JavaScript</span>
-                    <span class="skill-tag">HTML</span>
-                    <span class="skill-tag">CSS</span>
-                    <span class="skill-tag">Excel Macros</span>
-                    <span class="skill-tag">Automation</span>
+        <!-- Skills -->
+        <section class="section">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-item">NetSuite</div>
+                <div class="skill-item">SuiteScript</div>
+                <div class="skill-item">Xero</div>
+                <div class="skill-item">SAP</div>
+                <div class="skill-item">Oracle</div>
+                <div class="skill-item">Tally ERP</div>
+                <div class="skill-item">Financial Reporting</div>
+                <div class="skill-item">Taxation & Compliance</div>
+                <div class="skill-item">Audit</div>
+                <div class="skill-item">JavaScript</div>
+                <div class="skill-item">HTML</div>
+                <div class="skill-item">CSS</div>
+            </div>
+        </section>
+
+        <!-- Education & Certifications -->
+        <section class="section">
+            <h2 class="section-title">Education & Certifications</h2>
+            <div class="edu-cert-grid">
+                <div class="edu-item">
+                    <div class="edu-title">Chartered Accountant (CA)</div>
+                    <p><strong>The Institute of Chartered Accountant of India, Chennai</strong></p>
+                    <p>Jun 2012 - May 2019 | GPA: 55/100</p>
+                </div>
+                <div class="cert-item">
+                    <div class="cert-title">NetSuite Certified SuiteFoundation</div>
+                    <p><strong>Oracle</strong></p>
+                    <p>Dec 2024</p>
                 </div>
             </div>
+        </section>
 
-            <div class="skill-category animate-fade-in">
-                <h3>Financial Expertise</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Financial Reporting</span>
-                    <span class="skill-tag">GST</span>
-                    <span class="skill-tag">Income Tax</span>
-                    <span class="skill-tag">Auditing</span>
-                    <span class="skill-tag">Compliance</span>
-                </div>
+        <!-- Languages -->
+        <section class="section">
+            <h2 class="section-title">Languages</h2>
+            <div class="languages">
+                <div class="language-item">English</div>
+                <div class="language-item">Tamil</div>
+                <div class="language-item">Sourastra</div>
             </div>
-
-            <div class="skill-category animate-fade-in">
-                <h3>Tools & Applications</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Floqast</span>
-                    <span class="skill-tag">Concur</span>
-                    <span class="skill-tag">SERP</span>
-                    <span class="skill-tag">SuiteLet</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="container">
-        <h2 class="section-title">Key Projects</h2>
-        
-        <div class="project-card animate-fade-in">
-            <h3 class="project-title">In House MIS in NetSuite</h3>
-            <p>A self-learning project created to have MIS Monthly/Quarterly Reporting in NetSuite by replacing Excel reporting. Developed an MIS dashboard using SuiteLet feature in SuiteScript to present financial figures aligned with internal reporting requirements. Currently working on integrating AI capabilities to consolidate commentary from various legal entities.</p>
-            <div class="project-tech">
-                <span class="tech-tag">SuiteScript</span>
-                <span class="tech-tag">NetSuite</span>
-                <span class="tech-tag">SuiteLet</span>
-                <span class="tech-tag">JavaScript</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="container">
-        <h2 class="section-title">Professional Experience</h2>
-        
-        <div class="experience-timeline">
-            <div class="experience-item animate-fade-in">
-                <div class="experience-header">
-                    <div>
-                        <h3 class="experience-title">Senior Accountant</h3>
-                        <p class="experience-company">Tekion India Pvt Ltd</p>
-                        <p>Chennai</p>
-                    </div>
-                    <span class="experience-date">Jul 2022 - Present</span>
-                </div>
-                <ul class="experience-description">
-                    <li>Leading accounting and month-end closure activities for Indian and Canadian entities</li>
-                    <li>Managing end-to-end Fixed Assets Management including capitalization and depreciation</li>
-                    <li>Handling Statutory, Internal, Tax Audits with Financial Statements preparation</li>
-                    <li>Managing comprehensive statutory compliance across Direct Tax, Indirect Tax, and foreign payments</li>
-                    <li>Successfully implemented NetSuite ERP system and ZIP procurement automation tool</li>
-                    <li>Conducted UAT for NetSuite implementation and provided training to internal teams</li>
-                    <li>Implemented H2H integration for automated vendor payments</li>
-                </ul>
-                <div class="full-text">
-                    <h3>Senior Accountant - Tekion India Pvt Ltd (Jul 2022 - Present)</h3>
-                    <p>• Heading accounting and month-end closure activities for both Indian and Canadian entities, including preparation and review of all financial schedules and related review decks. Also responsible for end-to-end Fixed Assets Management, including capitalization, depreciation, and asset register maintenance.</p>
-                    <p>• Handled Statutory, Internal, Tax Audits, with hands-on experience in preparing Financial Statements such as P&L, Balance Sheet, Cash Flow statement as per Indian GAAP. Well-versed in SEZ compliances including monthly, quarterly and yearly.</p>
-                    <p>• Managed comprehensive statutory compliance across Direct Tax (TDS, TCS), Indirect Tax (GST), and foreign payment regulations including Form 15CA/15CB. Hands-on experience in SEZ/STPI compliances and intercompany reporting.</p>
-                    <p>• Handled regulatory filings for MCA, RBI, and Payroll including AOC-4, MGT-7, MSME disclosures, FLA, and RBI returns such as EDPMS, IDPMS, Softex and other returns. Also responsible for payroll-related compliances such as PF, ESI, and professional tax, ensuring accurate and timely submissions across all statutory platforms.</p>
-                    <p>• Handled end-to-end Accounts Payable operations, including vendor onboarding and employee reimbursements—managing the entire cycle from vendor negotiation to payment, while ensuring compliance with Direct and Indirect tax regulations. Successfully implemented H2H (Host-to-Host) integration to automate vendor payments and streamline processing.</p>
-                    <p>• Played a key role in the successful implementation of the new ERP system (NetSuite), migrating from the legacy ERP (ZERO). Involved in core modules including Accounts Payable (AP), Fixed Assets (FA), Financials, and India Localization. Also contributed to the implementation of ZIP, a procurement automation tool, ensuring seamless integration with NetSuite.</p>
-                    <p>• Conducted the UAT for NetSuite implementation and providing Training to the internal team.</p>
-                    <p>• Hands-on experience in NetSuite, including the creation of various reports for tax compliance filings and management reporting. Collaborated with internal stakeholders and external technical consultants for the implementation of the Order-to-Cash (OTC) process. Migrated single book accounting to multi book accounting in NetSuite.</p>
-                    <p>• Prepared and implemented accounting policies, RCM, and SOPs, including Fixed Assets capitalization, employee claims and reimbursement policies, and other key finance-related operational procedures.</p>
-                    <p>• Familiar with budgeting, forecasting, and variance analysis, including detailed comparisons of Budget vs. Actuals to support financial planning and decision-making.</p>
-                </div>
-            </div>
-
-            <div class="experience-item animate-fade-in">
-                <div class="experience-header">
-                    <div>
-                        <h3 class="experience-title">Finance Analyst (Contract)</h3>
-                        <p class="experience-company">Shell India Markets Pvt Ltd</p>
-                        <p>Chennai</p>
-                    </div>
-                    <span class="experience-date">Jul 2021 - Mar 2022</span>
-                </div>
-                <ul class="experience-description">
-                    <li>Managed month-end book closures and journal entries</li>
-                    <li>Conducted balance sheet reconciliations and financial reporting</li>
-                    <li>Performed book closure activities ensuring accurate accounting processes</li>
-                    <li>Handled monthly cost and revenue accruals</li>
-                </ul>
-                <div class="full-text">
-                    <h3>Finance Analyst (Contract) - Shell India Markets Pvt Ltd (Jul 2021 - Mar 2022)</h3>
-                    <p>• Managed month-end book closures, journal entries, financial reporting, and reconciliations.</p>
-                    <p>• Conducted balance sheet reconciliations, prepaid/accrual analysis, and financial reporting</p>
-                    <p>• Performed book closure activities, ensuring timely and accurate standard accounting processes.</p>
-                    <p>• Executed monthly cost and revenue accruals, and supported financial reporting processes.</p>
-                    <p>• Handled Statutory audit for foreign entities.</p>
-                    <p>Technologies: NetSuite, SuiteScript JavaScript, Xero, Tally, Floqast, Concur</p>
-                </div>
-            </div>
-
-            <div class="experience-item animate-fade-in">
-                <div class="experience-header">
-                    <div>
-                        <h3 class="experience-title">Specialist – Financial Management Reporting</h3>
-                        <p class="experience-company">Olam Information Technology Services Pvt Ltd</p>
-                        <p>Chennai</p>
-                    </div>
-                    <span class="experience-date">Dec 2019 - Dec 2020</span>
-                </div>
-                <ul class="experience-description">
-                    <li>Performed book closure activities with timely standard accounting processes</li>
-                    <li>Executed monthly cost and revenue accruals</li>
-                    <li>Supported financial reporting processes</li>
-                    <li>Handled statutory audit for foreign entities</li>
-                </ul>
-                <div class="full-text">
-                    <h3>Specialist – Financial Management Reporting - Olam Information Technology Services Pvt Ltd (Dec 2019 - Dec 2020)</h3>
-                    <p>• Performed book closure activities, ensuring timely and accurate standard accounting processes</p>
-                    <p>• Executed monthly cost and revenue accruals, and supported financial reporting processes</p>
-                    <p>• Handled Statutory audit for foreign entities.</p>
-                    <p>Technologies: SERP</p>
-                </div>
-            </div>
-
-            <div class="experience-item animate-fade-in">
-                <div class="experience-header">
-                    <div>
-                        <h3 class="experience-title">Article Assistant</h3>
-                        <p class="experience-company">S. Govindarajan, Chartered Accountant</p>
-                        <p>Kumbakonam</p>
-                    </div>
-                    <span class="experience-date">Jun 2014 - Oct 2019</span>
-                </div>
-                <ul class="experience-description">
-                    <li>Managed direct tax assessments and statutory audits</li>
-                    <li>Handled GST returns and ITR filings</li>
-                    <li>Led tax audits and ensured statutory compliance</li>
-                    <li>Managed firm operations and led a team of 10 people</li>
-                </ul>
-                <div class="full-text">
-                    <h3>Article Assistant - S. Govindarajan, Chartered Accountant (Jun 2014 - Oct 2019)</h3>
-                    <p>• Managed direct tax assessments, statutory audits for companies and banks, GST returns, ITR filings, and client advisory services.</p>
-                    <p>• Led tax audits and ensured statutory compliance across client portfolios</p>
-                    <p>• Managed firm and led a team of 10 people</p>
-                    <p>Technologies: Tally</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education & Certifications -->
-    <section id="education" class="container">
-        <h2 class="section-title">Education & Certifications</h2>
-        
-        <div class="education-cert-grid">
-            <div class="education-card animate-fade-in">
-                <h3>Education</h3>
-                <div style="margin-bottom: 1rem;">
-                    <h4 style="color: #bb86fc;">Chartered Accountant (CA)</h4>
-                    <p>The Institute of Chartered Accountants of India, Chennai</p>
-                    <p>Jun 2012 - May 2019</p>
-                    <p>GPA: 55/100</p>
-                </div>
-            </div>
-
-            <div class="cert-card animate-fade-in">
-                <h3>Certifications</h3>
-                <div>
-                    <h4 style="color: #64ffda;">NetSuite Certified SuiteFoundation</h4>
-                    <p>Oracle</p>
-                    <p>Dec 2025</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="container">
-        <h2 class="section-title">Let's Connect</h2>
-        
-        <div style="text-align: center; margin-top: 2rem;">
-            <div class="contact-info" style="align-items: center; margin-bottom: 2rem;">
-                <span style="font-size: 1.2rem;">📧 thsuganthan@gmail.com</span>
-                <span style="font-size: 1.2rem;">📱 +91-7418615997</span>
-                <span style="font-size: 1.2rem;">📍 Plot No.4, Radhakrishnan Nagar 2nd Street, Nanmangalam, Chennai - 600129</span>
-            </div>
-            
-            <div style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(20px); border-radius: 15px; padding: 2rem; border: 1px solid rgba(255, 255, 255, 0.2); max-width: 600px; margin: 0 auto;">
-                <h3 style="color: #64ffda; margin-bottom: 1rem;">Languages</h3>
-                <p>English, Tamil, Sourastra</p>
-                
-                <h3 style="color: #64ffda; margin: 2rem 0 1rem;">Interests</h3>
-                <p>Playing Cricket, Automating Tools, Learning Flute</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 T. H. Suganthan. All rights reserved.</p>
-        </div>
-    </footer>
+        </section>
+    </div>
 
     <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Add scroll effect to header
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            if (window.scrollY > 100) {
-                header.style.background = 'rgba(0, 0, 0, 0.8)';
-            } else {
-                header.style.background = 'rgba(0, 0, 0, 0.3)';
-            }
-        });
-
-        // Animate elements on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-fade-in');
+        // Add subtle parallax effect to job cards
+        document.addEventListener('mousemove', (e) => {
+            const cards = document.querySelectorAll('.job-card');
+            cards.forEach(card => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                if (x >= 0 && x <= rect.width && y >= 0 && y <= rect.height) {
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    const rotateX = (y - centerY) / 20;
+                    const rotateY = (centerX - x) / 20;
+                    
+                    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
+                } else {
+                    card.style.transform = '';
                 }
             });
-        }, observerOptions);
-
-        document.querySelectorAll('.experience-item, .skill-category, .project-card, .education-card, .cert-card').forEach(el => {
-            observer.observe(el);
         });
     </script>
 </body>
-</html
+</html>
